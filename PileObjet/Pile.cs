@@ -1,4 +1,6 @@
-﻿namespace MesOutils
+﻿using System.Collections.Generic;
+
+namespace MesOutils
 {
     /// <summary>
     /// Pile pouvant contenir des entiers.
@@ -7,6 +9,15 @@
     /// </summary>
     class Pile
     {
+        /// <summary>
+        /// Nombre maximum d'éléments de la Pile
+        /// </summary>
+        private int nbMaxElt;
+        /// <summary>
+        /// Liste contenant les éléments de la pile
+        /// </summary>
+        private List<int> elements;
+
 
     }
 }
