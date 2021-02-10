@@ -9,6 +9,7 @@ namespace MesOutils
     /// </summary>
     class Pile
     {
+
         /// <summary>
         /// Nombre maximum d'éléments de la Pile
         /// </summary>
@@ -18,6 +19,14 @@ namespace MesOutils
         /// </summary>
         private List<int> elements;
 
-
+        /// <summary>
+        /// Constructeur de l'objet pile
+        /// </summary>
+        /// <param name="nbMaxElt"> nombre maximum d'éléments de la pile</param>
+        public Pile(int nbMaxElt)
+        {
+            this.nbMaxElt = nbMaxElt;
+            this.elements = new List<int>();
+        }
     }
 }
