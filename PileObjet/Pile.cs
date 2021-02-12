@@ -29,14 +29,26 @@ namespace MesOutils
             this.nbMaxElt = nbMaxElt;
             this.elements = new List<int>();
         }
+        /// <summary>
+        /// Permet de savoir si la pile est vide.
+        /// </summary>
+        /// <returns> retourne un booléen </returns>
         public bool PileVide()
         {
             return (this.elements.Count == 0);
         }
+        /// <summary>
+        /// Permet de savoir si la pile est pleine.
+        /// </summary>
+        /// <returns> retourne un booléen </returns>
         public bool PilePleine()
         {
             return (this.elements.Count == this.nbMaxElt);
         }
+        /// <summary>
+        /// Permet d'empiler après le dernier élément empiler dans notre objet Pile.
+        /// </summary>
+        /// <param name="pNb"> Nombre à empiler </param>
         public void Empiler( int pNb)
         {
             if (!PilePleine())
@@ -48,6 +60,10 @@ namespace MesOutils
                 throw new Exception("Pile pleine, impossible d'empiler un élément");
             }
         }
+        /// <summary>
+        /// Permet de dépiler le dernier éléments de notre objet Pile.
+        /// </summary>
+        /// <returns> Denier nombre empiler </returns>
         public int Depiler()
         {
             if (!PileVide())

@@ -21,6 +21,10 @@ namespace PileObjet
             Console.ReadKey();
 
         }
+        /// <summary>
+        /// Test des méthodes PileVide et PilePleine de la classe Pile.
+        /// </summary>
+        /// <param name="nbElements"> Nombre maximum d'élément dans l'objet Pile </param>
         static  void TestePileVidePleine(int nbElements)
         {
             try
@@ -50,6 +54,10 @@ namespace PileObjet
             }
             
         }
+        /// <summary>
+        /// Test de la méthode Empiler de la classe Pile.
+        /// </summary>
+        /// <param name="pNb"> Nombre maximum d'éléments dans l'objet Pile </param>
         static void TesteEmpiler(int pNb)
         {
             try
@@ -64,6 +72,10 @@ namespace PileObjet
                 Console.WriteLine(ex.Message);
             }
         }
+        /// <summary>
+        /// Test des méthodes Empiler et Depiler de la classe Pile.
+        /// </summary>
+        /// <param name="nbElements"> Nombre maximum d'éléments dans l'objet Pile </param>
         static void TesteEmpilerDepiler(int nbElements)
         {
             try
