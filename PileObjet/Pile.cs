@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace MesOutils
 {
@@ -44,7 +45,20 @@ namespace MesOutils
             }
             else
             {
-                throw new System.Exception("Pile pleine, impossible d'empiler un élément");
+                throw new Exception("Pile pleine, impossible d'empiler un élément");
+            }
+        }
+        public int Depiler()
+        {
+            if (!PileVide())
+            {
+                int nb = this.elements[this.elements.Count - 1];
+                this.elements.RemoveAt(this.elements.Count - 1);
+                return nb;
+            }
+            else
+            {
+                throw new Exception("Impossible de dépiler, pile vide");
             }
         }
 
