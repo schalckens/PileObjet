@@ -28,5 +28,25 @@ namespace MesOutils
             this.nbMaxElt = nbMaxElt;
             this.elements = new List<int>();
         }
+        public bool PileVide()
+        {
+            return (this.elements.Count == 0);
+        }
+        public bool PilePleine()
+        {
+            return (this.elements.Count == this.nbMaxElt);
+        }
+        public void Empiler( int pNb)
+        {
+            if (!PilePleine())
+            {
+                this.elements.Add(pNb);
+            }
+            else
+            {
+                throw new System.Exception("Pile pleine, impossible d'empiler un élément");
+            }
+        }
+
     }
 }
