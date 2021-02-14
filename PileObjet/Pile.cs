@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Utilitaires;
 
 namespace MesOutils
 {
@@ -77,6 +78,40 @@ namespace MesOutils
                 throw new Exception("Impossible de dépiler, pile vide");
             }
         }
+        /// <summary>
+        /// Permet la Convertion d'un nombre entier dans une nouvelle base;
+        /// </summary>
+        /// <param name="pNb"> nombre maximum d'éléments dans la pile</param>
+        /// <param name="pNbAConvertir"> nombre entier à convertir</param>
+        /// <param name="pNewBase"> nouvelle base </param>
+        /// <returns></returns>
+        public string Convertir(int pNb, int pNbAConvertir, int pNewBase)
+        {
+            Pile deuxPile = new Pile(pNb);
+            int reste;
+            int quotient = pNbAConvertir;
+            int test; 
+            string valeur = "";
 
+            while (quotient != 0)
+            {
+                reste = (quotient % pNewBase);
+                quotient = (quotient / pNewBase);
+                deuxPile.Empiler(reste);
+            }
+            while (!deuxPile.PileVide())
+            {
+                test = deuxPile.Depiler();
+                if ( test < 10 )
+                {
+                    valeur += Convert.ToString(test);
+                }
+                else
+                {
+                    valeur += Convert.ToChar(test + 55);
+                }
+            }
+            return valeur;
+        }
     }
 }

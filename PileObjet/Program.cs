@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using MesOutils;
 using Utilitaires;
 
@@ -18,12 +14,14 @@ namespace PileObjet
             //TesteEmpiler(2);
             //TesteEmpilerDepiler(5);
 
-            int nbSaisi = UtilitaireConsole.SaisirNb();
-            Console.WriteLine("Nombre saisi : " + nbSaisi);
-            nbSaisi = UtilitaireConsole.SaisirNb(10);
-            Console.WriteLine("Nombre saisi : " + nbSaisi);
-            nbSaisi = UtilitaireConsole.SaisirNb(10,30);
-            Console.WriteLine("Nombre saisi : " + nbSaisi);
+            //int nbSaisi = UtilitaireConsole.SaisirNb();
+            //Console.WriteLine("Nombre saisi : " + nbSaisi);
+            //nbSaisi = UtilitaireConsole.SaisirNb(10);
+            //Console.WriteLine("Nombre saisi : " + nbSaisi);
+            //nbSaisi = UtilitaireConsole.SaisirNb(10,30);
+            //Console.WriteLine("Nombre saisi : " + nbSaisi);
+
+            TesteConvertir();
 
             Console.WriteLine("Fin de programme");
             Console.ReadKey();
@@ -105,5 +103,28 @@ namespace PileObjet
                 Console.WriteLine(ex.Message);
             }
         }
+        /// <summary>
+        /// Test de la méthode Convertir de la classe Pile.
+        /// </summary>
+        static void TesteConvertir()
+        {
+            try
+            {
+                Console.Write("Saisie du nombre d'éléments maximum de la pile.");
+                int pNb = UtilitaireConsole.SaisirNb();
+                Pile gentillePile = new Pile(pNb);
+                Console.Write("Saisie du nombre à convertir.");
+                int pNbAConvertir = UtilitaireConsole.SaisirNb(0);
+                Console.Write("Saisie de la nouvelle base.");
+                int pNewBase = UtilitaireConsole.SaisirNb(2, 16);
+                Console.WriteLine("Valeur Convertie : " +  gentillePile.Convertir(pNb,pNbAConvertir,pNewBase));
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine(ex.Message); ;
+            }
+        }
+
     }
 }
