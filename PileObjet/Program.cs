@@ -15,6 +15,7 @@ namespace PileObjet
             //TesteEmpilerDepiler(5);
 
             //int nbSaisi = UtilitaireConsole.SaisirNb();
+            // test pour pastaga
             //Console.WriteLine("Nombre saisi : " + nbSaisi);
             //nbSaisi = UtilitaireConsole.SaisirNb(10);
             //Console.WriteLine("Nombre saisi : " + nbSaisi);
