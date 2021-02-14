@@ -15,7 +15,7 @@ namespace Utilitaires
         /// <returns></returns>
         public static int SaisirNb() // un static ne peut pas être référencé par le biais d'une instance
         {
-            int nb = 0;
+            int nb;
             Console.Write("Veuillez saisir un nombre entier : ");
             string resultat = Console.ReadLine();
             while (!Int32.TryParse(resultat,out nb)) // Convertit le string resultat en int nb, retourne un true si la conversion est réussie
