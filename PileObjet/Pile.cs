@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using Utilitaires;
 
 namespace MesOutils
 {
@@ -50,9 +49,9 @@ namespace MesOutils
         {
             if (!PileVide())
             {
-                var nb = this.elements[this.elements.Count - 1];
-                this.elements.RemoveAt(this.elements.Count - 1);
-                return (nb);
+                var nb = this.elements[Count - 1];
+                this.elements.RemoveAt(Count - 1);
+                return Convert.ToInt32(nb);
             }
             else
             {
@@ -66,7 +65,7 @@ namespace MesOutils
         /// <param name="pNbAConvertir"> nombre entier à convertir</param>
         /// <param name="pNewBase"> nouvelle base </param>
         /// <returns></returns>
-        public string Convertir(int pNb, int pNbAConvertir, int pNewBase)
+        public string Convertir(int pNbAConvertir, int pNewBase)
         {
             Pile<int> deuxPile = new Pile<int>();
             int reste;

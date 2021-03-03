@@ -60,7 +60,7 @@ namespace PileObjet
         {
             try
             {
-                Pile unePile = new Pile(pNb);
+                Pile<int> unePile = new Pile<int>();
                 unePile.Empiler(2);
                 unePile.Empiler(14);
                 unePile.Empiler(6);
@@ -78,7 +78,7 @@ namespace PileObjet
         {
             try
             {
-                Pile unePile = new Pile(nbElements);
+                Pile<int> unePile = new Pile<int>();
                 unePile.Empiler(2);
                 unePile.Empiler(22);
                 int valeurDepilee = unePile.Depiler();
@@ -102,14 +102,12 @@ namespace PileObjet
         {
             try
             {
-                Console.Write("Saisie du nombre d'éléments maximum de la pile.");
-                int pNb = UtilitaireConsole.SaisirNb();
-                Pile gentillePile = new Pile(pNb);
+                Pile<int> gentillePile = new Pile<int>();
                 Console.Write("Saisie du nombre à convertir.");
                 int pNbAConvertir = UtilitaireConsole.SaisirNb(0);
                 Console.Write("Saisie de la nouvelle base.");
                 int pNewBase = UtilitaireConsole.SaisirNb(2, 16);
-                Console.WriteLine("Valeur Convertie : " +  gentillePile.Convertir(pNb,pNbAConvertir,pNewBase));
+                Console.WriteLine("Valeur Convertie : " +  gentillePile.Convertir(pNbAConvertir,pNewBase));
             }
             catch (Exception ex)
             {
