@@ -35,7 +35,7 @@ namespace PileObjet
         {
             try
             {
-                Pile unePile = new Pile(nbElements);
+                Pile<int> unePile = new Pile<int>();
                 if (unePile.PileVide())
                 {
                     Console.WriteLine("La pile est vide");
@@ -43,14 +43,6 @@ namespace PileObjet
                 else
                 {
                     Console.WriteLine("La pile n'est pas vide");
-                }
-                if (unePile.PilePleine())
-                {
-                    Console.WriteLine("Le pile est pleine");
-                }
-                else
-                {
-                    Console.WriteLine("La pile n'est pas pleine");
                 }
             }
             catch (Exception ex)

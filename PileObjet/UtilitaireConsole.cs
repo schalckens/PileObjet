@@ -18,7 +18,7 @@ namespace Utilitaires
             int nb;
             Console.Write("Veuillez saisir un nombre entier : ");
             string resultat = Console.ReadLine();
-            while (!Int32.TryParse(resultat,out nb)) // Convertit le string resultat en int nb, retourne un true si la conversion est réussie
+            while (!Int32.TryParse(resultat,out nb)) // Converti le string resultat en int nb, retourne un true si la conversion est réussie
             {
                 try
                 {
