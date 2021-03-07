@@ -45,19 +45,20 @@ namespace MesOutils
         /// Permet de dépiler le dernier éléments de notre objet Pile.
         /// </summary>
         /// <returns> Denier nombre empiler </returns>
-        public int Depiler()
+        public T Depiler()
         {
             if (!PileVide())
             {
                 var nb = this.elements[Count - 1];
                 this.elements.RemoveAt(Count - 1);
-                return Convert.ToInt32(nb);
+                return nb;
             }
             else
             {
                 throw new Exception("Impossible de dépiler, pile vide");
             }
         }
+        
         /// <summary>
         /// Permet la Convertion d'un nombre entier dans une nouvelle base;
         /// </summary>
@@ -65,6 +66,6 @@ namespace MesOutils
         /// <param name="pNbAConvertir"> nombre entier à convertir</param>
         /// <param name="pNewBase"> nouvelle base </param>
         /// <returns></returns>
-        
+
     }
 }

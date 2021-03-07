@@ -97,5 +97,37 @@ namespace PilObjet.Test
                 Console.WriteLine(ex.Message);
             }
         }
+        internal static string InversePhrase(String phrase)
+        {
+            Pile<string> maPile = new Pile<string>();
+            var tab = phrase.Split(' ');
+            foreach (string mot in tab)
+            {
+                maPile.Empiler(mot);
+            }
+            string message = "";
+            while (!maPile.PileVide())
+            {
+                message += " " + maPile.Depiler();
+            }
+            return message;
+        }
+        internal static void TesteInversePhrase()
+        {
+            try
+            {
+                string phrase = UtilitaireAPI.RecupereLoremIpsum(3);
+                Console.WriteLine("\n\nphrase:");
+                Console.WriteLine(phrase);
+                string phraseInversee = InversePhrase(phrase);
+                Console.WriteLine("\nphraseInversee : ");
+                Console.WriteLine(phraseInversee);
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine(ex.Message);
+            }
+        }
     }
 }

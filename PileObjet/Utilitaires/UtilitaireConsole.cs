@@ -111,5 +111,12 @@ namespace Utilitaires
             }
             return valeur;
         }
+
+        public static string InversePhrase(String phrase)
+        {
+            string[] maListe = phrase.Split(' ');
+            string maListeInversee = string.Join(" ", maListe.Reverse());
+            return maListeInversee;
+        }
     }
 }
