@@ -11,7 +11,7 @@ namespace PilObjet.Test
         /// Test des méthodes PileVide et PilePleine de la classe Pile.
         /// </summary>
         /// <param name="nbElements"> Nombre maximum d'élément dans l'objet Pile </param>
-        public static void TestePileVide(int nbElements)
+        public static void TestePileVide()
         {
             try
             {
@@ -36,7 +36,7 @@ namespace PilObjet.Test
         /// Test de la méthode Empiler de la classe Pile.
         /// </summary>
         /// <param name="pNb"> Nombre maximum d'éléments dans l'objet Pile </param>
-        public static void TesteEmpiler(int pNb)
+        public static void TesteEmpiler()
         {
             try
             {
@@ -54,7 +54,7 @@ namespace PilObjet.Test
         /// Test des méthodes Empiler et Depiler de la classe Pile.
         /// </summary>
         /// <param name="nbElements"> Nombre maximum d'éléments dans l'objet Pile </param>
-        public static void TesteEmpilerDepiler(int nbElements)
+        public static void TesteEmpilerDepiler()
         {
             try
             {
@@ -75,24 +75,26 @@ namespace PilObjet.Test
                 Console.WriteLine(ex.Message);
             }
         }
-        /// <summary>
-        /// Test de la méthode Convertir de la classe Pile.
-        /// </summary>
-        public static void TesteConvertir()
+        
+        public static void TesteConversion()
+        {
+            Console.Write("Saisie du nombre à convertir : ");
+            int nbAConvertir = UtilitaireConsole.SaisirNb(0);
+            Console.Write("Saisie de la nouvelle base : ");
+            int newBase = UtilitaireConsole.SaisirNb(2, 16);
+            //Appel de la méthode surchargé Teste Conversion pour effectuer la conversion
+            TesteConversion(nbAConvertir, newBase);
+        }
+        public static void TesteConversion(int nbAConvertir, int newBase)
         {
             try
             {
-                Pile<int> gentillePile = new Pile<int>();
-                Console.Write("Saisie du nombre à convertir.");
-                int pNbAConvertir = UtilitaireConsole.SaisirNb(0);
-                Console.Write("Saisie de la nouvelle base.");
-                int pNewBase = UtilitaireConsole.SaisirNb(2, 16);
-                Console.WriteLine("Valeur Convertie : " + gentillePile.Convertir(pNbAConvertir, pNewBase));
+                string valeurConvertie = UtilitaireConsole.Conversion(nbAConvertir, newBase);
+                Console.WriteLine(nbAConvertir + " est convertie en : " + valeurConvertie );
             }
             catch (Exception ex)
             {
-
-                Console.WriteLine(ex.Message); ;
+                Console.WriteLine(ex.Message);
             }
         }
     }

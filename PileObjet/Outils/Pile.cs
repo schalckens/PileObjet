@@ -65,33 +65,6 @@ namespace MesOutils
         /// <param name="pNbAConvertir"> nombre entier à convertir</param>
         /// <param name="pNewBase"> nouvelle base </param>
         /// <returns></returns>
-        public string Convertir(int pNbAConvertir, int pNewBase)
-        {
-            Pile<int> deuxPile = new Pile<int>();
-            int reste;
-            int quotient = pNbAConvertir;
-            int test; 
-            string valeur = "";
-
-            while (quotient != 0)
-            {
-                reste = (quotient % pNewBase);
-                quotient = (quotient / pNewBase);
-                deuxPile.Empiler(reste);
-            }
-            while (!deuxPile.PileVide())
-            {
-                test = deuxPile.Depiler();
-                if ( test < 10 )
-                {
-                    valeur += Convert.ToString(test);
-                }
-                else
-                {
-                    valeur += Convert.ToChar(test + 55);
-                }
-            }
-            return valeur;
-        }
+        
     }
 }

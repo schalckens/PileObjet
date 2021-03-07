@@ -7,20 +7,15 @@ namespace PileObjet
     {
         static void Main(string[] args)
         {
-            //TestePileVidePleine(5);
-            //TestePileVidePleine(0);
-            //TesteEmpiler(5);
-            //TesteEmpiler(2);
-            //TesteEmpilerDepiler(5);
-
-            //int nbSaisi = UtilitaireConsole.SaisirNb();
-            //Console.WriteLine("Nombre saisi : " + nbSaisi);
-            //nbSaisi = UtilitaireConsole.SaisirNb(10);
-            //Console.WriteLine("Nombre saisi : " + nbSaisi);
-            //nbSaisi = UtilitaireConsole.SaisirNb(10,30);
-            //Console.WriteLine("Nombre saisi : " + nbSaisi);
-
-            TestPile.TesteConvertir();
+            TestPile.TestePileVide();
+            TestPile.TesteEmpiler();
+            TestPile.TesteEmpilerDepiler();
+            // appels des méthodes de tests conversion
+            TestPile.TesteConversion();
+            TestPile.TesteConversion(154,2);
+            TestPile.TesteConversion(11,16);
+            TestPile.TesteConversion(2986,16);
+            TestPile.TesteConversion(9999, 16);
 
             Console.WriteLine("Fin de programme");
             Console.ReadKey();
